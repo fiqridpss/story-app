@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+@mixin rounded {
+  border-radius: $radius;
+}
+
+@mixin hover-scale {
+  transition: transform 0.2s ease;
+  &:hover {
+    transform: scale(1.02);
+  }
+}

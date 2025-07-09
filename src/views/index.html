@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <title><%= htmlWebpackPlugin.options.title %> | Story App</title>
+  </head>
+  <body>
+    <header>
+      <!-- Your header and navbar -->
+
+      <story-header></story-header>
+    </header>
+
+    <br />
+    <div class="container text-center my-5">
+      <!-- Button Component-->
+      <story-button></story-button>
+    </div>
+
+    <main>
+      <!-- Modal Component -->
+      <story-modal></story-modal>
+
+      <!-- Your story content -->
+      <div class="container">
+        <div class="row" id="story-container">
+          <!-- Card story dari JS akan ditampilkan di sini -->
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Footer Content-->
+      <story-footer></story-footer>
+    </footer>
+  </body>
+</html>

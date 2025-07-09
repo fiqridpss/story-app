@@ -1,0 +1,11 @@
+@use 'variables';
+@use 'mixins';
+@use 'card';
+@use 'navbar';
+
+// Global style
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: variables.$light-color;
+  color: variables.$dark-color;
+}

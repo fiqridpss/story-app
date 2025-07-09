@@ -1,0 +1,16 @@
+// Nested Selector + Ampersand
+
+@use 'variables' as *;
+
+.navbar {
+  background-color: $dark-color;
+
+  .nav-link {
+    color: $light-color;
+
+    &:hover,
+    &.active {
+      color: $primary-color;
+    }
+  }
+}

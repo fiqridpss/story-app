@@ -1,0 +1,37 @@
+// Nested Selector + Ampersand
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.card {
+  @include rounded;
+  background-color: $light-color;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  @include hover-scale;
+
+  img {
+    height: 200px;
+    object-fit: cover;
+    @include rounded;
+  }
+
+  .card-body {
+    .card-title {
+      font-weight: bold;
+      color: $dark-color;
+    }
+
+    .card-text {
+      color: $text-muted;
+    }
+  }
+
+  .card-footer {
+    font-size: 0.875rem;
+    background-color: transparent;
+
+    &.text-muted {
+      color: $text-muted;
+    }
+  }
+}
