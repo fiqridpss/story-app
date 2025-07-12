@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html } from "lit";
 
 class StoryHeader extends LitElement {
   createRenderRoot() {
@@ -7,7 +7,10 @@ class StoryHeader extends LitElement {
 
   render() {
     return html`
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow" style="z-index: 1030;">
+      <nav
+        class="navbar navbar-dark bg-dark fixed-top shadow"
+        style="z-index: 1030;"
+      >
         <div class="container-fluid">
           <a class="navbar-brand" href="#">StoryApp</a>
 
@@ -15,25 +18,44 @@ class StoryHeader extends LitElement {
           <button
             class="navbar-toggler"
             type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
           >
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <!-- Collapsible Menu -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="/index.html">Dashboard</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="/input.html">Input</a>
-              </li>
-            </ul>
+          <!-- Offcanvas Menu -->
+          <div
+            class="offcanvas offcanvas-end text-bg-dark"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                StoryApp
+              </h5>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="/index.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/input.html">Input</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/profil.html">Profil</a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
@@ -41,4 +63,4 @@ class StoryHeader extends LitElement {
   }
 }
 
-customElements.define('story-header', StoryHeader);
+customElements.define("story-header", StoryHeader);

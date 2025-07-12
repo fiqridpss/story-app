@@ -55,6 +55,11 @@ module.exports = {
       filename: "input.html",
       template: path.resolve(__dirname, "src/views/input.html"),
     }),
+    new HtmlWebpackPlugin({
+      title: "Profil",
+      filename: "profil.html",
+      template: path.resolve(__dirname, "src/views/profil.html"),
+    }),
 
     new CopyWebpackPlugin({
       patterns: [
