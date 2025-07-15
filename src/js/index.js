@@ -13,6 +13,26 @@ import "../components/StoryFooter.js";
 import "../components/StoryModal.js";
 import "../components/StoryButton.js";
 
+// Cek apakah user sudah login
+function protectPage() {
+  const token = localStorage.getItem("token");
+  if (!token) {
+    alert("Anda harus login terlebih dahulu.");
+    window.location.href = "login.html";
+  }
+}
+
+// Proteksi untuk beberapa halaman
+const path = window.location.pathname;
+
+if (
+  path.endsWith("index.html") ||
+  path.endsWith("profil.html") ||
+  path.endsWith("input.html")
+) {
+  protectPage();
+}
+
 // Tampil data
 const container = document.querySelector("#story-container");
 const loading = document.getElementById("loading");
