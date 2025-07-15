@@ -5,6 +5,8 @@ class StoryCard extends LitElement {
     name: {},
     description: {},
     photoUrl: {},
+    lat: {},
+    lon: {},
     createdAt: {},
   };
 
@@ -19,6 +21,8 @@ class StoryCard extends LitElement {
         <div class="card-body">
           <h5 class="card-title">${this.name}</h5>
           <p class="card-text">${this.description}</p>
+          <p class="card-text">${this.lat}</p>
+          <p class="card-text">${this.lon}</p> 
         </div>
         <div class="card-footer text-muted">
           ${new Date(this.createdAt).toLocaleDateString()}

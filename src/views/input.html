@@ -17,11 +17,16 @@
 
     <br />
     <br />
-    
+
     <main class="container mt-5 mb-5">
       <h2 class="mb-4 text-center">Tambah Story Baru</h2>
 
-      <form class="needs-validation" novalidate enctype="multipart/form-data">
+      <form
+        class="needs-validation"
+        id="addStoryForm"
+        novalidate
+        enctype="multipart/form-data"
+      >
         <div class="mb-3">
           <label for="description" class="form-label">Deskripsi</label>
           <textarea
@@ -46,6 +51,19 @@
         </div>
 
         <button class="btn btn-primary" type="submit">Kirim</button>
+
+        <div
+          id="addStorySpinner"
+          class="text-center mt-3"
+          style="display: none"
+        >
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="mt-2">Mengunggah story...</p>
+        </div>
+
+        <div id="errorMsg" class="text-danger mb-3"></div>
       </form>
     </main>
 
@@ -54,24 +72,4 @@
       <story-footer></story-footer>
     </footer>
   </body>
-  <script>
-    (() => {
-      "use strict";
-      const forms = document.querySelectorAll(".needs-validation");
-
-      Array.from(forms).forEach((form) => {
-        form.addEventListener("submit", (event) => {
-          if (!form.checkValidity()) {
-            event.preventDefault();
-            event.stopPropagation();
-          } else {
-            event.preventDefault();
-            // Simulasi kirim data
-            alert("Story berhasil ditambahkan!");
-          }
-          form.classList.add("was-validated");
-        });
-      });
-    })();
-  </script>
 </html>

@@ -5,6 +5,14 @@ class StoryHeader extends LitElement {
     return this; // light DOM agar Bootstrap berfungsi
   }
 
+  logout() {
+    const confirmLogout = confirm("Yakin ingin Logout?");
+    if (confirmLogout) {
+      localStorage.clear(); // Menghapus semua data (termasuk token)
+      window.location.href = "/login.html"; // Redirect ke halaman login
+    }
+  }
+
   render() {
     return html`
       <nav
@@ -53,6 +61,15 @@ class StoryHeader extends LitElement {
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="/profil.html">Profil</a>
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link text-danger"
+                    href="#"
+                    @click="${this.logout}"
+                  >
+                    Logout
+                  </a>
                 </li>
               </ul>
             </div>
