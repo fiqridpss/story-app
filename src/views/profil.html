@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <title><%= htmlWebpackPlugin.options.title %> | Profil - Story App</title>
+  </head>
+  <body>
+    <header>
+      <!-- Your header and navbar -->
+
+      <story-header></story-header>
+    </header>
+
+    <main
+      class="container-fluid bg-light min-vh-100 d-flex align-items-center justify-content-center"
+    >
+      <div class="row w-100 py-5 px-3 px-md-5">
+        <div
+          class="col-md-6 d-flex flex-column align-items-center justify-content-center text-center"
+        >
+          <img
+            src="/favicon.png"
+            alt="Logo Bangfiq"
+            class="img-fluid rounded-circle shadow mb-4"
+            style="max-width: 220px"
+          />
+          <h2 class="fw-bold text-dark">Bangfiq?</h2>
+          <p class="fs-5 text-muted px-2 px-md-4">
+            <strong>Bangfiq?</strong> adalah sebuah startup kreatif yang baru
+            saja dibangun, dengan fokus pada bidang <em>media berita</em>,
+            <em>percetakan</em>, <em>jasa joki</em>, dan <em>coffee shop</em>.
+            Kami hadir membawa semangat kolaboratif dan inovasi.
+          </p>
+        </div>
+
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+          <div class="text-center">
+            <h4 class="fw-semibold mb-3">Visi Kami</h4>
+            <p class="text-secondary">
+              Menjadi pusat layanan kreatif dan informasi terpercaya bagi
+              masyarakat digital.
+            </p>
+            <h4 class="fw-semibold mt-4 mb-3">Misi Kami</h4>
+            <ul
+              class="list-unstyled text-start text-secondary mx-auto"
+              style="max-width: 400px"
+            >
+              <li>✔️ Menyediakan berita yang akurat dan cepat.</li>
+              <li>✔️ Menawarkan layanan cetak modern.</li>
+              <li>✔️ Menjadi partner andalan joki akademik & event.</li>
+              <li>✔️ Membangun tempat ngopi dengan suasana komunitas.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <!-- Footer Content-->
+      <story-footer></story-footer>
+    </footer>
+  </body>
+</html>

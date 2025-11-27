@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+
+    <title><%= htmlWebpackPlugin.options.title %> | Input - Story App</title>
+  </head>
+  <body>
+    <header>
+      <!-- Your header and navbar -->
+
+      <story-header></story-header>
+    </header>
+
+    <br />
+    <br />
+
+    <main class="container mt-5 mb-5">
+      <h2 class="mb-4 text-center">Tambah Story Baru</h2>
+
+      <form
+        class="needs-validation"
+        id="addStoryForm"
+        novalidate
+        enctype="multipart/form-data"
+      >
+        <div class="mb-3">
+          <label for="description" class="form-label">Deskripsi</label>
+          <textarea
+            class="form-control"
+            id="description"
+            rows="4"
+            required
+          ></textarea>
+          <div class="invalid-feedback">Deskripsi tidak boleh kosong.</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="photo" class="form-label">Foto</label>
+          <input
+            type="file"
+            class="form-control"
+            id="photo"
+            accept="image/*"
+            required
+          />
+          <div class="invalid-feedback">Pilih file gambar yang valid.</div>
+        </div>
+
+        <button class="btn btn-primary" type="submit">Kirim</button>
+
+        <div
+          id="addStorySpinner"
+          class="text-center mt-3"
+          style="display: none"
+        >
+          <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+          <p class="mt-2">Mengunggah story...</p>
+        </div>
+
+        <div id="errorMsg" class="text-danger mb-3"></div>
+      </form>
+    </main>
+
+    <footer>
+      <!-- Footer Content-->
+      <story-footer></story-footer>
+    </footer>
+  </body>
+</html>

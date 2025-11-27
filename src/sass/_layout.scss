@@ -1,0 +1,45 @@
+@use 'variables';
+@use 'mixins';
+@use 'bootstrap/scss/bootstrap';
+
+// Global style
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: $light-color;
+  color: $dark-color;
+  padding-top: 60px;
+}
+
+// Card styling
+.card {
+  @include rounded;
+  transition: transform 0.2s;
+  &:hover {
+    transform: scale(1.02);
+  }
+  img {
+    @include rounded;
+    height: 200px;
+    object-fit: cover;
+  }
+}
+
+// Footer
+footer {
+  background-color: $dark-color;
+  color: $light-color;
+}
+
+// Nested nav
+nav.navbar {
+  ul.navbar-nav {
+    li.nav-item {
+      a.nav-link {
+        &.active,
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
